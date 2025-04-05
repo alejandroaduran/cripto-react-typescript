@@ -15,6 +15,7 @@ body {
   background-size: cover;
   min-height: 100vh;
   font-family: "Outfit", sans-serif;
+  font-size: 2rem;
 }
 
 .container {
@@ -43,4 +44,45 @@ body {
   background-color: var(--white);
   border-radius: 1.5rem;
   box-shadow: 0 0 2rem rgba(0, 0, 0, .2);
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form label{
+  display: block; /* Make the label a block-level element */
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.form select {
+  display: block; /* Ensure the select is on a new line */
+  width: 100%; /* Make the select wider */
+  max-width: 100%; /* Prevent it from exceeding the container width */
+  background-color: #ecebeb;
+  border: none;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+}
+
+.form [type="submit"] {
+  background-color: var(--primary);
+  color: var(--black);
+  border: none;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  transition: background-color .3s ease;
+}
+
+.form [type="submit"]:hover {
+  background-color: #4dd6a1;
 }
