@@ -1,15 +1,29 @@
-import { z } from "zod";
+import { z } from 'zod'
 
-export const currencySchema = z.object({
-    code: z.string().min(3).max(3),
-    name: z.string().min(1).max(50),
-});
+export const CurrencySchema = z.object({
+    code: z.string(),
+    name: z.string()
+})
 
-export const cryptoCurrencyResponseSchema = z.object({
-        CoinInfo: z.object({
-            Name: z.string(),
-            Fullname: z.string(),
-        })
+export const CryptoCurrencyResponseSchema = z.object({
+    CoinInfo : z.object({
+        FullName: z.string(),
+        Name: z.string()
     })
+})
 
-export const cryptoCurrenciesSchema = z.array(cryptoCurrencyResponseSchema)
+export const CryptoCurrenciesResponseSchema = z.array(CryptoCurrencyResponseSchema)
+
+export const PairSchema = z.object({
+    currency: z.string(),
+    criptocurrency: z.string()
+})
+
+export const CryptoPriceSchema = z.object({
+    IMAGEURL : z.string(),
+    PRICE: z.string(),
+    HIGHDAY: z.string(),
+    LOWDAY: z.string(),
+    CHANGEPCT24HOUR: z.string(),
+    LASTUPDATE: z.string()
+})
